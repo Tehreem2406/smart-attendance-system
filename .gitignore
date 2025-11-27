@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+
+# Environment variables
+.env
+*.env
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# IDE folders
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Compiled binary files
+*.so
+*.exe
+*.dll
+
+# FastAPI / Uvicorn cache
+*.pid
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Byte-compiled C extensions
+*.cpython-*
+
+# Pydantic cache
+.pydantic/
+
+# MyPy
+.mypy_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Local database or temp data
+*.sqlite3
+*.db
