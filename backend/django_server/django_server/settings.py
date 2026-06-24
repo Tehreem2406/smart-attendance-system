@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     'users',
     'attendance',
     'classes',
-    'face_api',
-    'qr_api',
 ]
 
 # MIDDLEWARE
