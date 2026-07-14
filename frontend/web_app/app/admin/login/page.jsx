@@ -4,11 +4,42 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { loginUser, requestPasswordReset, confirmPasswordReset, verifyResetCode } from "../../../src/services/api";
-import { useAuth } from "../../../src/hooks/useAuth";
 
 export default function Home() {
   const router = useRouter();
-  const { login } = useAuth();
+
+  const login = (userData) => {
+    if (typeof window === "undefined") return;
+
+    sessionStorage.setItem(
+      "smart_attendance_user",
+      JSON.stringify(userData)
+    );
+
+    if (userData?.access_token) {
+      sessionStorage.setItem(
+        "smart_attendance_token",
+        userData.access_token
+      );
+    } else if (userData?.token) {
+      sessionStorage.setItem(
+        "smart_attendance_token",
+        userData.token
+      );
+    }
+
+    const userRole =
+      userData?.category ||
+      userData?.role ||
+      role;
+
+    if (userRole) {
+      sessionStorage.setItem(
+        "smart_attendance_role",
+        userRole
+      );
+    }
+  };
   const [step, setStep] = useState(1);
   const [role, setRole] = useState("");
   const [form, setForm] = useState({ username: "", password: "" });
