@@ -1,16 +1,50 @@
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/api";
+const API_ORIGIN =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://127.0.0.1:8000";
 
-export const loginUser = async (username, password, role) => {
+const BASE_URL = `${API_ORIGIN}/api`;
+
+export const loginUser = async (
+  username,
+  password,
+  role,
+  fingerprint = null
+) => {
   try {
-    const response = await fetch(`${BASE_URL}/login`, {
+    const response = await fetch(`${API_ORIGIN}/auth/login`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password, category: (role || "").toLowerCase() }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        password,
+        category: (role || "").toLowerCase(),
+        fingerprint,
+      }),
     });
+
     const data = await response.json();
-    return data;
-  } catch (_error) {
-    return { error: "Network error" };
+
+    if (!response.ok) {
+      return {
+        error:
+          data.detail ||
+          data.error ||
+          "Invalid username or password",
+      };
+    }
+
+    return {
+      ...data,
+      category: (role || "admin").toLowerCase(),
+    };
+  } catch (error) {
+    console.error("Login Error:", error);
+
+    return {
+      error: "Network error",
+    };
   }
 };
 
