@@ -82,7 +82,7 @@ Installation
 
 1. Clone the Repository
 ```bash
-git clone https://github.com/[your-username]/smart-attendance-system.git
+git clone https://github.com/Tehreem2406/smart-attendance-system
 cd smart-attendance-system
 ```
 
