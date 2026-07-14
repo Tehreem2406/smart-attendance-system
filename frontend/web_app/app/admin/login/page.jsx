@@ -84,13 +84,23 @@ export default function Home() {
 
     const response = await loginUser(form.username, form.password, role);
 
+    console.log("Login response:", response);
+
     if (response.error) {
       alert(response.error);
       return;
     }
 
-    if (!response.access_token) {
-      alert("Invalid username or password");
+    if (
+      response.error ||
+      response.detail ||
+      response.message !== "Login successful"
+    ) {
+      alert(
+        response.error ||
+          response.detail ||
+          "Invalid username or password"
+      );
       return;
     }
 
