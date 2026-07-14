@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 # EduSync Smart Attendance & School Management System
+=======
+EduSync Management System
+>>>>>>> origin/main
 
 A modern, full-stack school management system with session-based attendance, financial ledger, and comprehensive user role management!
 
 ---
 
+<<<<<<< HEAD
 ## 📋 Table of Contents
+=======
+Table of Contents
+>>>>>>> origin/main
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
@@ -15,15 +23,25 @@ A modern, full-stack school management system with session-based attendance, fin
 
 ---
 
+<<<<<<< HEAD
 ## ✨ Features
 
 ### 👥 User Roles
+=======
+Features
+
+User Roles
+>>>>>>> origin/main
 - **Admin**: Manage users, classes, and generate reports
 - **Teacher**: Create attendance sessions, upload marks, manage assignments
 - **Student**: View attendance, marks, fee vouchers, submit assignments
 - **Finance Officer**: Manage fees, salaries, financial ledger, budget tracking
 
+<<<<<<< HEAD
 ### 📊 Core Features
+=======
+Core Features
+>>>>>>> origin/main
 - **Session-Based Attendance**: Start/stop attendance sessions, students join via unique code
 - **Financial Ledger**: Track all income/expenses with categories, attachments, and running balance
 - **Budget Tracking**: Set monthly category budgets and monitor spending
@@ -34,7 +52,11 @@ A modern, full-stack school management system with session-based attendance, fin
 
 ---
 
+<<<<<<< HEAD
 ## 🛠️ Tech Stack
+=======
+Tech Stack
+>>>>>>> origin/main
 
 | Layer | Technologies |
 |-------|--------------|
@@ -45,7 +67,11 @@ A modern, full-stack school management system with session-based attendance, fin
 
 ---
 
+<<<<<<< HEAD
 ## 📁 Project Structure
+=======
+Project Structure
+>>>>>>> origin/main
 
 ```
 smart-attendance-system/
@@ -78,6 +104,7 @@ smart-attendance-system/
 
 ---
 
+<<<<<<< HEAD
 ## 🚀 Installation
 
 ### 1. Clone the Repository
@@ -89,12 +116,29 @@ cd smart-attendance-system
 ### 2. Backend Setup
 
 #### Create Virtual Env
+=======
+Installation
+
+1. Clone the Repository
+```bash
+git clone https://github.com/Tehreem2406/smart-attendance-system
+cd smart-attendance-system
+```
+
+2. Backend Setup
+
+Create Virtual Env
+>>>>>>> origin/main
 ```bash
 cd backend
 python -m venv venv
 ```
 
+<<<<<<< HEAD
 #### Activate Virtual Env
+=======
+Activate Virtual Env
+>>>>>>> origin/main
 - Windows:
   ```powershell
   venv\Scripts\activate
@@ -104,18 +148,30 @@ python -m venv venv
   source venv/bin/activate
   ```
 
+<<<<<<< HEAD
 #### Install Dependencies
+=======
+Install Dependencies
+>>>>>>> origin/main
 ```bash
 pip install fastapi uvicorn sqlalchemy passlib pydantic python-multipart PyPDF2
 ```
 
+<<<<<<< HEAD
 #### Start the Backend
+=======
+Start the Backend
+>>>>>>> origin/main
 ```bash
 python -m uvicorn fastapi_face_engine.main:app --reload
 ```
 The backend server will run on http://127.0.0.1:8000
 
+<<<<<<< HEAD
 ### 3. Frontend Setup
+=======
+3. Frontend Setup
+>>>>>>> origin/main
 
 ```bash
 cd frontend/web_app
@@ -126,7 +182,11 @@ The frontend will run on http://localhost:3000
 
 ---
 
+<<<<<<< HEAD
 ## 📖 Usage
+=======
+Usage
+>>>>>>> origin/main
 
 1. **Start the backend** at http://127.0.0.1:8000
 2. **Start the frontend** at http://localhost:3000
@@ -135,7 +195,11 @@ The frontend will run on http://localhost:3000
 
 ---
 
+<<<<<<< HEAD
 ## 📡 API Documentation
+=======
+API Documentation
+>>>>>>> origin/main
 
 Once the backend is running, visit these URLs for auto-generated documentation:
 - **Swagger UI**: http://127.0.0.1:8000/docs
@@ -143,6 +207,7 @@ Once the backend is running, visit these URLs for auto-generated documentation:
 
 ---
 
+<<<<<<< HEAD
 ## 🤝 Contributors
 Built with ❤️ by Tehreem Usman and team!
 
@@ -150,3 +215,13 @@ Built with ❤️ by Tehreem Usman and team!
 
 ## 📄 License
 This project is created for educational purposes as part of a Final Year Project (FYP).
+=======
+Contributors
+Built with by Tehreem Usman and team!
+
+---
+
+License
+This project is created for educational purposes as part of a Final Year Project (FYP).
+
+>>>>>>> origin/main
